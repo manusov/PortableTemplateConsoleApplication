@@ -1,0 +1,6 @@
+fasm libx64.asm libx64.o
+flat assembler  version 1.71.51  (16384 kilobytes memory)
+4 passes, 1251 bytes.
+ar rc libx64_static.a libx64.o
+ranlib libx64_static.a
+gcc lsdump86.c libx64_static.a -o lsdump86

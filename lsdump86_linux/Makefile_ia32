@@ -1,0 +1,14 @@
+all: lsdump86
+
+lsdump86: lsdump86.c libia32_static.a
+	gcc lsdump86.c libia32_static.a -o lsdump86
+	
+libia32_static.a: libia32.asm
+	fasm libia32.asm libia32.o
+	ar rc libia32_static.a libia32.o
+	ranlib libia32_static.a
+	
+clean:
+	rm *.a -f
+	rm *.o -f
+	rm lsdump86 -f

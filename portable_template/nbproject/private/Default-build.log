@@ -1,0 +1,15 @@
+make: Предупреждение: время изменения файла «Makefile» находится в будущем (6912)
+gcc portable_template.c -o portable_template
+portable_template.c: In function ‘handlerInBin’:
+portable_template.c:144:14: warning: implicit declaration of function ‘fileLoad’ [-Wimplicit-function-declaration]
+     result = fileLoad(parms[INBIN], pointerBinary, MAX_BINARY);
+              ^
+portable_template.c: In function ‘handlerOutBin’:
+portable_template.c:173:14: warning: implicit declaration of function ‘fileSave’ [-Wimplicit-function-declaration]
+     result = fileSave(parms[OUTBIN], baseBinary, size);
+              ^
+portable_template.c: In function ‘handlerAll’:
+portable_template.c:237:18: warning: implicit declaration of function ‘buildDump’ [-Wimplicit-function-declaration]
+     int status = buildDump(baseBinary, pointerPart, sizeBinary, sizePart);
+                  ^
+make: предупреждение: Неправильный ход часов.  Сборка может быть неполной.
